@@ -20,7 +20,7 @@ con let, ya que este tiene nambito reducido el cual no puede
 salir de el bloque "{}"
 
 CONST
------
+-----         
 
 Las constantes como su nombre lo indica, es una manera de declarar valores / variables 
 los cuales no van a cambiar durante todo el codigo.
@@ -35,9 +35,6 @@ const VALORES = ["blanco","Negro","Azul"]
 
 objeto.correo = "alex@gmail.com"; (sirve para agregar algo a un objeto)
 colores.push ("anaranjado") (para agregar un elemento a un array)
-
-
-
 
 
 */
