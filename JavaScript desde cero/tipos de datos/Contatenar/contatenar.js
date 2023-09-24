@@ -14,7 +14,7 @@ console.log (saludo)
 
 /*Esto suele ser muy cansado, pero tambien podems hacer usa de la "interpolacion" y "Template String" 
 
-Para interpolar se usa la comilla invertida ````````*/
+Para interpolar se usa la comilla invertida   ````````*/
 
 let saludo2 = `Hola mi nombre es ${nombre} ${apellido}`
 console.log (saludo2)
