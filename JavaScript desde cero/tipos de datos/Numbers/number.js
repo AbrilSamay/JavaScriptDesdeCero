@@ -30,5 +30,7 @@ console.log(parseFloat(d) + " Resultado de parseFloat (Mantener decimales)")// N
 
 console.log(typeof c, typeof d + " Resultado de typeof(Saber el tipo de dato)") // Nos sirve para saber el tipo de dato.
 
-console.log(c + parseFloat(d) + " Resultado de parseFloat (Pasar texto a numero)") // Pasa texto a numero con decimal.
+console.log(c + parseFloat(d) + " Resultado de parseFloat  ( Pasar texto a numero )") // Pasa texto a numero con decimal.
+
+console.log("Sigue adelante con tus sueños :' ")
 
