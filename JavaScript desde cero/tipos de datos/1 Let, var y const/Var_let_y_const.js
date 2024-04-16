@@ -55,4 +55,17 @@ const colores = ["blanco","Negro","Azul"]
 objeto.correo = "alex@gmail.com";  /*(sirve para agregar algo a un objeto)*/
 colores.push ("anaranjado") /*(para agregar un elemento a un array)*/
 
+//En esta clase se hace mencion a lo que son los objetos y los arreglos
+
+//un objeto es un conjunto de llaves con valores dentro 
+
+let estoEsUnObjeto = {
+nombre = "alex"
+edad = 20
+ciudad = "panfilolandea"
+}
+
+
+//Un array en una coleccion de datos. 
+
 
