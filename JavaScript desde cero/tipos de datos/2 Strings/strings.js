@@ -1,17 +1,17 @@
-/*
-STRINGS 
--------
 
-Son cadenos de texto, hay varias maneras de declararlos. 
+/*STRINGS 
+-------*/
 
-let nombre = "Alex"   (comimllas dobles)
-let apellido = 'Romana'  (comillas simples)
-let saludo = new string ("Hola mundo")
-let lorem = "lorem ipsum, dolor sit amet"
+//Son cadenos de texto, hay varias maneras de declararlos. 
+
+let nombre = "Alex"   //Comillas dobles 
+let apellido = 'Romana'  //Comillas simples
+let saludo = new string ("Hola mundo") // Methods 
+let lorem = "lorem ipsum, dolor sit amet" 
 
 
 
-FUNCIONES A RECORDAR 
+// FUNCIONES A RECORDAR 
 
 nombre.length (cuenta los caracteres)
 nombre.toUpperCase ()     =   //Coloca todo en mayusculas
