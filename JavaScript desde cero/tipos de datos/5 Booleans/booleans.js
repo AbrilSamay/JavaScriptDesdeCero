@@ -1,5 +1,10 @@
 //Los Booleans son aquellos que arrojan un "TRUE" or "FALSE" (verdadera y falso)
 
+let verdadero = true
+let falso = false
+console.log(verdadero, falso)
+console.log(typeof verdadero, typeof falso)
+
 //Aqui algunos valores que pueden arrojar positivo. 
 
 if (true)
