@@ -17,10 +17,19 @@ let valorDeLaFunction = unaFuncionQueDevuelveValor ();
 
 function funcionQueDevuelveFuncion (){
     console.log("esta es la primera funcion, esta no hace nada mas que devolver un texto en la consola")
-    return function funcionRetornada () {
-        console.log('esto es rotornado por la segunda funcion retornada desde la primera funcion ')
-        return function terceraFuncionRetordada (){
-            console.log(`todo esto viene desde la tercera funcicion retornada desde la segunda `)
-        }
-    }
+    return `Este es un texto devuelto desde el return de la funcion`
 }
+
+let valorDeFuncion = funcionQueDevuelveFuncion () 
+console.log (valorDeFuncion)
+
+// Las funciones declaradas se someten a hoistin, lo que quiere decir que no importa en donde han sido invocadas estas se van a ejecutar de igual manera.
+// para evitar esto se usan las funciones expresadas 
+
+const funcionExpresada = function() {
+    console.log ("Esto es una funcion expresada, si la ejecutamos antes de declararla esta no funcionara")
+
+
+}
+
+funcionExpresada ()
