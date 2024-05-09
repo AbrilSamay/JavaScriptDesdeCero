@@ -20,5 +20,4 @@ console.log ("legth: es el numero de elementos en el array")
 const colores = [];
 
 colores.push = ["rojo", "azul", "verde"] // push agrega elementos al array (siempre lo agrega al ultimo.)
-colores.pop = (); // Elimina un elemento del array
-
+colores.pop = (abc) // Elimina un elemento del array
