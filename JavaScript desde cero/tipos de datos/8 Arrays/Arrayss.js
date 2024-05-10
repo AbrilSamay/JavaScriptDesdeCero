@@ -28,3 +28,8 @@ console.log (colores)
 
 const arrayEjemplo = Array(100).fill(true)
 console.log(arrayEjemplo,'este es el array que estoy buscando')
+
+
+colores.forEach(function(el,index){
+    console.log(`<li id=${index}>${el}</li>`)
+})
