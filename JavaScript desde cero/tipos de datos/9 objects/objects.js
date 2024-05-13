@@ -25,3 +25,7 @@ const Jota = {
         console.log(`Hola de nuevo ${nombre} ${apellido}, espero todo vaya de maravilla`)
     }
 }
+
+
+console.log(Jota)
+console.log (Jota ["saludar"])
