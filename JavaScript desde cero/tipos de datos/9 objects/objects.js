@@ -36,5 +36,6 @@ console.log(Jota)
 console.log (Jota ["nombre"])
 console.log (Jota.altura)
 Jota.saludar()
-console.log (Object.keys(Jota))
-console.log (Object.values(Jota))
+console.log (Object.keys(Jota)) // Crea una lista con las llaves del objeto.
+
+console.log (Object.values(Jota)) // Crea una lista con las valores del objeto. 
