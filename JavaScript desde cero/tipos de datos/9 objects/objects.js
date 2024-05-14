@@ -21,11 +21,15 @@ const Jota = {
                email: 'alexisjosueromanaenamorado@gmail.com',
                facebook: 'Alexis Romana'
     },
-    saludar: function (nombre,apellido){
+    saludar: function (){
+        let nombre = 'alexis'
+        let apellido = 'romana'
         console.log(`Hola de nuevo ${nombre} ${apellido}, espero todo vaya de maravilla`)
     }
 }
 
 
 console.log(Jota)
-console.log (Jota ["saludar"])
+console.log (Jota ["nombre"])
+console.log (Jota.altura)
+Jota.saludar()
