@@ -24,12 +24,17 @@ const Jota = {
     saludar: function (){
         let nombre = 'alexis'
         let apellido = 'romana'
-        console.log(`Hola de nuevo ${nombre} ${apellido}, espero todo vaya de maravilla`)
+        console.log(`Hola de nuevo ${this.nombre} ${this.apellido}, espero todo vaya de maravilla`)
     }
 }
 
+
+//Dentrot de un objeto a las variables se les llama atrivutos o propiedades 
+// y a las funciones se les llama 'metodo'
 
 console.log(Jota)
 console.log (Jota ["nombre"])
 console.log (Jota.altura)
 Jota.saludar()
+console.log (Object.keys(Jota))
+console.log (Object.values(Jota))
