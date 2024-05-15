@@ -16,3 +16,32 @@ let modulo = 5 % 2; // Esto nos da el residuo de una multiplicacion
 let diivcion = 5 / 2 // Nos da el resultado de una divicion 
 console.log (`Este es el resultado de la vicicion 5/2 ${diivcion}
 Este es el residuo de la divicon 5/2 #${modulo}`)
+
+
+//  OPERADORES RELACIONALES 
+
+/*
+> Mayor que, < Menor que, >= mayor o igual, <= menos o igual, == comparacion, === comparacion a fondo.
+*/
+
+console.log(`ocho mayor que nueve ${8>9}, 
+nueve mayor que ocho, ${9>8}, ocho mayor o igual que nueve 8>=9 ${8>=9}, 
+siete mayor que siete: 7>7: ${7>7}
+`)
+
+/*El numero de iguales que usamos es importante porque: */
+
+// = 1 un igual sirve para asignacion 
+let asignacion = " le estooy asignando este valor a la variable a"
+console.log (` 1 solo igual '=' sirve para asignar un valor ${asignacion}`)
+
+// == 2 Dos iguales sirver para comparar datos pero no de manera especifica. "
+console.log (` Dos iguales sirve para comparar datos pero no de manera especifica '7' (string) es igual a 7 ( numero )${ "7" == 7},
+nos arroja true, por que son la misma cosa, pero no son el mismo tipo de dato. Esto es una mala practia, ya que nos puede dar errores.`)
+
+// === 3 signos de igual sirven para hacer una comparacion pero mas a fondo. 
+console.log (`Tres iguales es la manera reconmendada de comparar datos, ya que este va vas a fondo y especifica el tipo de dato, si un dato es igual pero 
+no ese el mismo tipo de dato nos dara false 
+'7' (string) es igual a 7 ( numero ): ${ "7" === 7}
+7 (numero) es igual a 7 (numero):${7 === 7}
+`)
