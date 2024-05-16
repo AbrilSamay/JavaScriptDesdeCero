@@ -45,3 +45,19 @@ no ese el mismo tipo de dato nos dara false
 '7' (string) es igual a 7 ( numero ): ${ "7" === 7}
 7 (numero) es igual a 7 (numero):${7 === 7}
 `)
+
+
+/*
+Operadores de incremento y decremento
+*/
+
+// Sirven para incrementar o disminuir el valor.
+
+let incrementacion = 1;
+let suma = 2
+
+incrementacion = incrementacion + 2; // esta es una manera de hacerlo 
+console.log (`El primer valor de incrementacion: ${incrementacion}`)
+
+suma += 3; // Hace lo miso que el anterior, suma 3 a 1 
+console.log (suma, 'valor de segundo metodo incrementacion')
