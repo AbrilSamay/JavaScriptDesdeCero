@@ -61,3 +61,16 @@ console.log (`El primer valor de incrementacion: ${incrementacion}`)
 
 suma += 3; // Hace lo miso que el anterior, suma 3 a 1 
 console.log (suma, 'valor de segundo metodo incrementacion')
+
+
+
+// Operador Unario
+
+// Es el que se utiliza para subar solo una unidad 
+let i = 1;
+i ++; 
+console.log (i, ' este es el valor de i, ++ solo suma uno')
+
+let h = 1; 
+h--; 
+console.log (h, 'este el valor de h, solo resta uno ')
