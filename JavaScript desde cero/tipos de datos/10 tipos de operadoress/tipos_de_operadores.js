@@ -103,3 +103,5 @@ console.log ('es 7 igual a 7, 8 igual a 8, 9 igual a 9 y 2 igual a 2', ((7===7)&
 
 console.log ('es 7 igual a 7, 6 igual a 6 y 5 igual a 5', ((7===7)&&(6===6)&&(5===5)),`nos tiene que dar true, 
 ya que todas son verdaderas`)
+
+// Eso es todo por hoy 
