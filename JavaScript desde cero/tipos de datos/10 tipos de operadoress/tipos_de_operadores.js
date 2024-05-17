@@ -84,4 +84,22 @@ Sirven para comparar varios datos al mismo tiempo, algunos de ellos son: !Not, |
  */
 
 
+// !Not: lo que es verdadero lo vuelve a falso y viceversa 
 
+console.log ( `Ejemplo de !Not, 9 es igual a 9 ? ${!9===9}, nos dara falso, aunque este sea verdadero`)
+console.log ( `Ejemplo de !Not, 9 es igual a 8 ? ${!9===8}, nos dara verdadero, aunque sea falso`)
+
+
+// || Or: Si tengo una o mas condiciones y una de esta se cumple, basta para que este operador logico me devuelva true
+
+console.log ('es 9 igual a 9 y 2 igual a 8 ', (9===9)||(9==="9"))
+console.log (' si una condicion se cumple nos dara un valor verdadero, no importa si tenemos 100 y solo una es verdadera')
+
+
+// && And: Este funciona de manera inversa, solo si todas las condiciones son verdaderas nos dara true
+
+console.log ('&& and, solo si todo se cumple nos dara true')
+console.log ('es 7 igual a 7, 8 igual a 8, 9 igual a 9 y 2 igual a 2', ((7===7)&&(8===8)&&(7==="7")),`no importa si una no se cumple, o todo o nada.` )
+
+console.log ('es 7 igual a 7, 6 igual a 6 y 5 igual a 5', ((7===7)&&(6===6)&&(5===5)),`nos tiene que dar true, 
+ya que todas son verdaderas`)
