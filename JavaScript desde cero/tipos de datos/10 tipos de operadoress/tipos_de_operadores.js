@@ -74,3 +74,14 @@ console.log (i, ' este es el valor de i, ++ solo suma uno')
 let h = 1; 
 h--; 
 console.log (h, 'este el valor de h, solo resta uno ')
+
+
+
+//OPERADORES LOGICOS 
+
+/*
+Sirven para comparar varios datos al mismo tiempo, algunos de ellos son: !Not, || Or, && And
+ */
+
+
+
