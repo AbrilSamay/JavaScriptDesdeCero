@@ -21,3 +21,5 @@ if (edad > 17){
 } else {
     console.log ("Eres menor de edad")
 }
+
+// Se puede anidar mas de un solo if else if else, dependiendo de nuestras necesidades
