@@ -23,3 +23,35 @@ if (edad > 17){
 }
 
 // Se puede anidar mas de un solo if else if else, dependiendo de nuestras necesidades
+
+
+/*
+Ahora dependiendo de cuantas opciones tengamos sera nuestra logica 
+por ejemplo, podemos tener una estructura de control con varias opciones 
+y en ese caso podemos usar if else de manera anidada, por ejemplo,  podemos 
+crear un mensaje en la consola que nos salude dependiendo de la hora:
+
+0 horas hasta las 5: "Hora de dormir "
+5 horas hasta las 12: "buenos dias "
+12 horas hasta las 18: "Buenas tardes"
+18 horas hasta las 23: "Buenas noches "
+el cual se verias de esta manera:
+
+*/
+
+
+let hora = 23.9;
+
+if (hora < 6){
+    console.log ("HORA DE DORMIR")
+} else if (hora > 6 && hora < 12){
+    console.log("Buenos dias")
+} else if (hora > 11 && hora < 18){
+    console.log ("Buenas Tardes")
+} else if (hora > 17 && hora < 24){
+    console.log ("Buenas Noches")
+}
+
+console.log ('FUNCIONAAAAAAAAAAA')
+
+// Veamos el funcionamiento!!
