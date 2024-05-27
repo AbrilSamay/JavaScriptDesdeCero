@@ -75,3 +75,44 @@ primero asignamos una condicion en este caso seria si edad es mayor o igual a 18
 despues el signo '?' sirve para asignar la condicion que se ejecutara si verdadero
 despues el signo ':' servira para asignar la condicion que se ejecutara si falso
 */
+
+/**
+ Switch - case 
+ -------------
+
+ Esto sirve en una situacion en donde tengamos deferentes valores para una misma variable
+ y dependiendo de esos valores se ejecutara una u otra cosa, parecido a un if else
+ */
+let dia = 0
+
+ switch (dia) {
+    case 0:
+        console.log ("Domingo")
+        break;
+    case 1:
+        console.log ('Lunes');
+        break;
+    case 2:
+        console.log('Martes');
+        break;
+    case 3:
+        console.log ('Miercoles');
+        break;
+    case 4:
+        console.log ('Jueves');
+        break;
+    case 5:
+        console.log ('Viernes');
+        break;
+    case 6:
+        console.log ('Sabado')
+        break;
+    case undefined:
+        console.log ('Undefined')
+        break;
+    default:
+        console.log ("el dia no existe :(")
+        break;
+ }
+
+ // Es todo por esta clase.
