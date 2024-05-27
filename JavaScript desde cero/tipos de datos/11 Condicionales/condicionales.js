@@ -14,7 +14,7 @@ Hasta el momento hemos estado usando estructuras secueciales ya que se ejecuta u
 
 //if y else, funcionan de tal manera que si una condicion se cumple se ejecturan ciertas acciones.
 
-let edad = 17;
+let edad = 18;
 
 if (edad > 17){
     console.log ("Eres mayor de edad")
@@ -40,7 +40,7 @@ el cual se verias de esta manera:
 */
 
 
-let hora = 23.9;
+let hora = 9;
 
 if (hora < 6){
     console.log ("HORA DE DORMIR")
@@ -54,4 +54,24 @@ if (hora < 6){
 
 console.log ('FUNCIONAAAAAAAAAAA')
 
-// Veamos el funcionamiento!!
+
+//Operadores Ternarios 
+/**
+ Son una alternativa al if y else, solo que este se ejecuta de una manera distinta 
+ y solo se puede tener dos condiciones, una verdadera y una falsa. 
+
+
+ Primero que todo creamos una variable para asignarle ese valor ternario.
+ */
+
+let eresMayor = (edad >= 18)
+?"Eres mayor de edad"
+:'Eres menor de edad';
+
+console.log(eresMayor)
+
+/*
+primero asignamos una condicion en este caso seria si edad es mayor o igual a 18
+despues el signo '?' sirve para asignar la condicion que se ejecutara si verdadero
+despues el signo ':' servira para asignar la condicion que se ejecutara si falso
+*/
