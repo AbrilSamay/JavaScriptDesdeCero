@@ -91,3 +91,31 @@ fon in es mas para objetos primitivos en javascript
     console.log(caracter)
     
    }
+
+
+
+   /**
+    Ejercicio: Suma de los cuadrados
+
+    Crea un arreglo llamado numeros con algunos números enteros (por ejemplo, [2, 4, 6, 8, 10]).
+    Utiliza un bucle for...of para calcular la suma de los cuadrados de cada número en el arreglo.
+    Imprime el resultado de la suma.
+
+    */
+
+    // for of 
+
+const numeros = [2,4,6,8,10];
+let ingresar = prompt('Suma de numeros al cuadrado, ingresa los numeros separados por coma ","');
+let arrayNumeros = ingresar.split (",");
+
+
+let sumaDeCuadrados = 0;
+for (const cuadrados of arrayNumeros) {
+  let resultado = (cuadrados * cuadrados)
+  sumaDeCuadrados += resultado
+  
+
+}
+alert (`El resultado de la suma de cuadrados es: ${sumaDeCuadrados}`)
+
