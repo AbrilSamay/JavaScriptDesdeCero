@@ -119,3 +119,5 @@ for (const cuadrados of arrayNumeros) {
 }
 alert (`El resultado de la suma de cuadrados es: ${sumaDeCuadrados}`)
 
+
+
