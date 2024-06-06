@@ -29,6 +29,8 @@ while (contador < 10){
  let array = [10,20,30,40,50,60];
 index = 0
  let valor = 0
+
+ 
  
  // El mejor metodo que se puede usar hoy en dia en el metodo for
  /*
@@ -77,7 +79,7 @@ fon in es mas para objetos primitivos en javascript
   Este metodo permite recorrer todos los elementos de cualquier objeto que 
   sea iterable en javascript
 
-  for of es mas para arrays, strings, boleans y todo en javascript 
+  for of es para arrays, strings, boleans y todo en javascript 
 
  */
 
