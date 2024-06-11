@@ -39,3 +39,4 @@ console.log ('hola que tal provando')
     }
   }
 
+console.log ( perro, dog.ladrar (), dog)
