@@ -140,4 +140,4 @@ Lenin = new Personas ("lenin",2,7.00)
 console.log (Carlos.saludo(),Carlos.miEdad())
 
 
-// eso seria todo por esta ocacion, hola que tal 
+// eso seria todo por esta ocacion
