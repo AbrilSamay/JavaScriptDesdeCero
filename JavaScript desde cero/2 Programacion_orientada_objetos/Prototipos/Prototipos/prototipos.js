@@ -106,7 +106,7 @@ console.log (pancho.saludar(),pancho.presentacion(), sofia.presentacion(),sofia.
 // asi todo objeto que se llame animal o cualquier otro nombre ya tendra este metodo.
 
 
-function Personas (Nombre,Edad, Estatura){
+function Personas(Nombre,Edad, Estatura){
     // atributos 
 
     this.Nombre = Nombre;
@@ -118,7 +118,7 @@ function Personas (Nombre,Edad, Estatura){
 
 
 Personas.prototype.saludo = function (){
-    console.log (`hola que tal me llamo ${this.Nombre}`)
+    console.log (`hola que tal me llamo ${this.Nombre}`,99999999999999999999)
     return 'saludo ejecutandose'
 
 }
@@ -132,7 +132,7 @@ Personas.prototype.miEsatura = function(){
     console.log ( `mido ${this.estatura} cm`)
 }
 
-let Carlos = new Personas ('Carlos',99,1.4),
+let Carlos = new Personas ('juan carlos',99,1.4,838383),
 panfila = new Personas ('panfila', 88, 2.00),
 Lenin = new Personas ("lenin",2,7.00)
 
