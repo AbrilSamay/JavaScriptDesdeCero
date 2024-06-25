@@ -74,12 +74,12 @@ const animal2 = {
 // es un prototipo que nos servira para poder crear otras funciones sin estar copiando y pegando.
 
 
-function Animal (nombre, genero, edad){
+function Animal (nombre, genero){
 
     // atributos 
     this.nombre = nombre;
     this.genero = genero;
-    this.edad = edad;
+   
 
     // Metodos 
     this.saludar = function (){
