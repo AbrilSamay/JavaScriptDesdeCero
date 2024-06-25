@@ -38,5 +38,32 @@ this.super = Animal;
 this.super (nombre, genero)
 this.raza = raza;
 
-
 }
+
+// Perro esta herendando de animal. 
+Perro.prototype = new Animal ();
+Perro.prototype.construcutor = Perro;
+
+
+/*
+Cuando una clase hija hereda de una clase madre puede usar todos los metodos que esta tiene
+incluso puede sobreescribir esos metodos de la clase de la cual proviene
+*/
+
+// sobre escritura 
+
+Perro.prototype.saludar = function (){
+    console.log ('soy un perrito bonito bien pero bien bonito, esto esta siendo sobre escrito, ya no es como venia en el metodo del padre en la funcion constructa perro esto es cambiando. ')
+}
+
+Perro.prototype.ladrar = function(){
+    console.log ('guaau guauu')
+    
+}
+
+
+const perro = new Perro ('perro','gei','aguacatero');
+
+
+
+console.log (perro.saludar())
