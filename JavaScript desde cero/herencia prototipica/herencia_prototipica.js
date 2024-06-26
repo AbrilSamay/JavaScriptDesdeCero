@@ -67,3 +67,8 @@ const perro = new Perro ('perro','gei','aguacatero');
 
 
 console.log (perro.saludar())
+
+
+
+
+
