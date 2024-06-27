@@ -63,3 +63,4 @@ Perro.prototype.ladrar = function(){
 
 const sofia = new Perro ('sofia','lesbica','aguacatera');
 console.log (sofia.saludar())
+ // hola
