@@ -42,7 +42,7 @@ this.raza = raza;
 
 // Perro esta herendando de animal. 
 Perro.prototype = new Animal ();
-Perro.prototype.construcutor = Perro;
+Perro.prototype.constructor = Perro;
 
 
 /*
@@ -57,18 +57,9 @@ Perro.prototype.saludar = function (){
 }
 
 Perro.prototype.ladrar = function(){
-    console.log ('guaau guauu')
+    console.log ('guaau guauu',this.nombre,this.genero,this.raza,'aparentemente aaaaaaaaaaaaaaaaaaa')
     
 }
 
-
-const perro = new Perro ('perro','gei','aguacatero');
-
-
-
-console.log (perro.saludar())
-
-
-
-
-
+const sofia = new Perro ('sofia','lesbica','aguacatera');
+console.log (sofia.saludar())

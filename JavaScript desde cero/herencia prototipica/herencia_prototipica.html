@@ -49,12 +49,20 @@ function Animal2 (raza,sexo, tipoDe, salud){
     this.super = Animales;
     this.super (raza,sexo,tipoDe);
     this.salud = salud;
+    
 }
-        
+
+Animal2.prototype = new Animales;
+Animal2.prototype.constructor = Animal2;
 
 Animal2.prototype.cualquierCosa = function (){
-    console.log ('aparentemente esta funcionando')
+    console.log ('aparentemente esta funcionando', this.salud)
 }
+
+const mirequenose = new Animal2 ('aguacatero','gay','gato','gracias ya comi'), tampocoseyo = new Animal2 ('si','no','probablemente','no hay')
+
+
+console.log (mirequenose.say(), tampocoseyo.cualquierCosa())
 
 
     </script>
