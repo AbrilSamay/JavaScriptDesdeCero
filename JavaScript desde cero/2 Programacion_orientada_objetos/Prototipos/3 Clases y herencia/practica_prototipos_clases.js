@@ -71,3 +71,41 @@ console.log (spike2.saludoDePerro(), Ranger2.saludoDePerro(), spike2.saludo())
 
 
 //se que puede ser mejor y que puede contener errores, pero es lo que se hasta el momento.
+
+
+
+// AHORA LO HARE CON CLASES 
+
+class AnimalClase {
+    constructor (Nombre,raza){
+        this.NombreAnimal = Nombre;
+        this.RazaAnimalClase = raza;
+    }                                   // constructor es el que recibe los parametros dentro de una clase
+                                        // dentro de este van las asignaciones.
+
+    saludoClase (){
+        console.log (this.NombreAnimal,this.RazaAnimalClase,'hola este es  saludoClase ejecutandose')
+    }
+}
+
+const kennyoung = new AnimalClase ('Kennyoung','perro');
+console.log (kennyoung.saludoClase());
+
+// ahora hare la herencia.
+
+class PerrosClase extends AnimalClase {
+    constructor (nombre,raza,edad,color){
+        super (nombre,raza);
+        this.edad = edad;
+        this.color = color; 
+    }
+
+
+    ladrar (){
+        console.log ('guauuuu guauuuu guauuuuu')
+    }
+}
+
+const yonka = new PerrosClase ('yonka','perro','6 meses','cafesito tirando al marroncito');
+
+console.log ( yonka)
