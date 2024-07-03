@@ -45,3 +45,8 @@ console.log (document) // depende del navegador
 podemos utilizar console.dir para que sea de esa manera. */
 
 console.dir (document)
+
+
+// Tambien se pueden mostrar las cosas a manera de tabla con .table:
+
+console.table (Object.entries(console).sort());
