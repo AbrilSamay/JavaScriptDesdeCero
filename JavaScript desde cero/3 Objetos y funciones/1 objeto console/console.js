@@ -72,4 +72,15 @@ const numeros = [1,2,3,4,5], vocales = ["a",'e','i','o','u'];
     
   }
 // lo comento para ahorrar memoria ,,,, console.log (arreglo)
-  console.timeEnd ("uno")
+  console.timeEnd ("uno");
+
+  // En ocaciones se puede necesitar saber cuantas veces se ha ejecutado un bloque de codigo. para eso contamos con console.count
+
+  // Console.count; 
+
+
+  for (let index2 = 0; index2 < 100; index2 ++) {
+    console.count('codigo ejectutandose')
+    console.log (index2)
+    
+  }
