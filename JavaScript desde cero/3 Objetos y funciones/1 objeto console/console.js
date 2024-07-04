@@ -44,9 +44,32 @@ console.log (document) // depende del navegador
 /* Pero si lo necesitamos de manera objeto como en javascript (con las llaves triangulares ),
 podemos utilizar console.dir para que sea de esa manera. */
 
-console.dir (document)
+//console.dir (document)
 
 
 // Tambien se pueden mostrar las cosas a manera de tabla con .table:
 
 console.table (Object.entries(console).sort());
+
+/*
+Para colocar un array un una tabla so usa .table 
+a su vez funciona con objects y otras cosas en javascritp
+*/
+
+const numeros = [1,2,3,4,5], vocales = ["a",'e','i','o','u'];
+ console.table (numeros); console.table (vocales)
+ console.log ('funcionan a la perfeccion');
+
+ // Tambien se puede medir cuanto tiempo tarda tu codigo en ejecutarse 
+  // abrimos el bloque de codigo con console.time 
+
+  console.time ("uno")
+
+  const arreglo  = Array (10000000);
+
+  for (let index = 0; index < arreglo.length; index++) {
+    arreglo [index] = index;
+    
+  }
+// lo comento para ahorrar memoria ,,,, console.log (arreglo)
+  console.timeEnd ("uno")
