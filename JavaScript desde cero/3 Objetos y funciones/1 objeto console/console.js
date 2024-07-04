@@ -84,3 +84,14 @@ const numeros = [1,2,3,4,5], vocales = ["a",'e','i','o','u'];
     console.log (index2)
     
   }
+
+  // Tambien podemos hacer pruebas con el metodo .assert 
+
+  let x = 2, y = 3, pruebaXY = 'se espera que x sea menor que y'
+
+
+                        //variables a manera de objeto. 
+  console.assert(x < y, {x,y,pruebaXY})
+        //primero la condicion 
+
+// Si hay un error saltara un error a la consola de manera personalizada. 
