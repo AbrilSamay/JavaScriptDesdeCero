@@ -24,3 +24,28 @@ console.log (fecha.getMonth()) // Nos da el mes en el que estamos.
 
 console.log (fecha.getFullYear());
 // Nos brinda el anio completo, si solo colocamos year nos dara un numeros desde 1900 hasta el anio actual.
+
+
+//Podemos obtener los segundos, horas y hasta los milisegundos con estos methods en js 
+console.log (fecha.getHours());
+console.log (fecha.getSeconds());
+console.log (fecha.getMilliseconds());
+
+// De igual manera se peude pasar el valor de Date a un string de la siguiente manera:
+
+console.log (fecha.toDateString()); // nos da todo en un string
+
+// Si necesitamos la hora en estado normal o actualizado en cada segundo con:
+
+console.log (fecha.toLocaleDateString());
+
+/**
+ La hora estandar tal y como la conocemos tiene el nombre de Time Stand, el cual 
+ empieza a contarse desde el primero de enero de 1970, podemos calcular los 
+ segundos que han pasado desde ese dia con el metodo now el cual se le asigna al objeto Date.
+
+ */
+
+ console.log (Date.now()); // da los segundos pasados desde el primero de enero de 1970
+
+ // Moment.Js es la mejor libreria para poder trabajar el tiempo en javascript 
