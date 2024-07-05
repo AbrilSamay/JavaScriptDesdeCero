@@ -24,4 +24,3 @@ console.log (fecha.getMonth()) // Nos da el mes en el que estamos.
 
 console.log (fecha.getFullYear());
 // Nos brinda el anio completo, si solo colocamos year nos dara un numeros desde 1900 hasta el anio actual.
-
