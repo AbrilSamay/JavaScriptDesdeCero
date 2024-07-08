@@ -51,3 +51,18 @@ console.log (Math.abs(-7.8),'valor absoluto de un numero con Math.abs')
 //  A su vez podemos elevar numeros a una potencia con el method power 
 
 console.log (Math.pow(2,5)) // primero colocamos el numero a elevar, para despues colocar el exponente.
+
+// Sin necesitamos saber si un numero es positivo o negativo contamos con el method sing 
+
+console.log (Math.sign(3.5),'si el valor es positivo dara 1'); //si el valor es positivo dara 1
+console.log (Math.sign(-9.3),'si el valor en negativo dara -1'); // Si el valor es negativo dara -1
+console.log (Math.sign(0),'si el valor es cero dara cero'); // si el valor es cero dara 0
+
+// Tambien podemos generar un valor aleatorio entre 0 y 1 con el method random
+ 
+console.log (Math.random(),'completamente aleatorio');// completamente aleatorio.
+
+// ahora bien si necesitamos generar un numero aleatorio mas alto podemos hacerlo de la suguiente manera:
+
+console.log (Math.round(Math.random ()* 1000), 'numero aleatorio entre 0 y 1 multiplicado por 1000 y redondeado ')
+
