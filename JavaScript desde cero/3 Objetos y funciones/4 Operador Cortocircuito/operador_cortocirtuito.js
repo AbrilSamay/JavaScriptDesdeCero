@@ -42,3 +42,30 @@ console.log (null|| 'valor que pasa a TRUE');// Null tiende a false, mostrandose
 console.log (undefined|| 'valor que pasa a TRUE');//undefined tiende a false, y se muestra el valor true;
 console.log (''|| 'valor que pasa a TRUE');//un string vacio pasa a false, y se muestra el valor true;
 console.log (0|| 'valor que pasa a TRUE');//0 pasa a false, y se muestra el valor true;
+
+
+/*
+Esto tambien se puede llevar a cabo con el operador ternario and &&
+pero con este pasara exactamente lo mismo pero al reves, cuando el valor tienda a false sera el que se 
+ejecute en nuestro codigo, lo opuesto que con or || 
+
+aca algunos ejemplos:
+*/
+
+
+
+// VALORES QUE TIENDEN A TRUE
+
+console.log ('string '  && 'Valor por defecto si a la izquierda es true');  // el valor de la izquierda tiende a true, por ende se ejecuta el valor de la derecha;
+console.log (91  && 'Valor por defecto si a la izquierda es true'); // el valor de la izquierda tiende a true, por ende se ejecuta el valor de la derecha;
+console.log (true  &&'Valor por defecto si a la izquierda es true'); // el valor de la izquierda tiende a true, por ende se ejecuta el valor de la derecha;
+console.log ( []  &&'Valor por defecto si a la izquierda es true'); // el valor de la izquierda tiende a true, por ende se ejecuta el valor de la derecha;
+console.log ({}  &&'Valor por defecto si a la izquierda es true');  // el valor de la izquierda tiende a true, por ende se ejecuta el valor de la derecha;
+
+// VALORES QUE TIENDEN A FALSE
+
+console.log (false  && 'valor que pasa a TRUE'); // El valor de la izquierda tiende a false, por ende es el que se ejecuta;
+console.log (null && 'valor que pasa a TRUE');// El valor de la izquierda tiende a false, por ende es el que se ejecuta;
+console.log (undefined && 'valor que pasa a TRUE');// El valor de la izquierda tiende a false, por ende es el que se ejecuta;
+console.log ('' && 'valor que pasa a TRUE');// El valor de la izquierda tiende a false, por ende es el que se ejecuta;
+console.log (0 && 'valor que pasa a TRUE');// El valor de la izquierda tiende a false, por ende es el que se ejecuta;
