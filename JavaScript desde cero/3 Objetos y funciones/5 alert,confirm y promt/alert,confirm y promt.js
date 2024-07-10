@@ -17,3 +17,11 @@ cuales nos permitiran crear un request al usuario.
 
 let alert1 = alert('esto es una alerta'); //En si alert no guarda ningun valor :p
 let confirm1 = confirm ('esto es una confirmacion'); // Guardara un valor entre TRUE Y False;
+let prompt1 = prompt('este es un prompt, sirve para que el usuario ingrese un valor');
+// prompt nos permite hacer un request al user para que nos brinde any value;
+
+console.log (alert1);
+console.log (confirm1);
+console.log (prompt1);
+
+// y esas son las maneras en que un usuario nos puede brindar datos y valores :)
