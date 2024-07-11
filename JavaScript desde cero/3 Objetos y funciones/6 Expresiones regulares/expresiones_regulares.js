@@ -47,3 +47,16 @@ console.log (expRegMethod.exec(string)); // exec nos dara una busqueda mas preci
 ambos metodos son utiles pero, test solo nos dara un boolean (true false)
 mientras exec nos brindara informacion mas precisa dentro de un array.
 */
+
+/*
+algunas banderas utiles pueden ser:
+
+/d  busca un numero 
+[]  busca de un valor a otro 
+{}  busca un numero especifico de veces 
+ */
+
+let methodBusqueda = /\d/ig; 
+console.log (methodBusqueda.test(string));
+let methodBusqueda2 = /[0-9]/ig; 
+console.log (methodBusqueda2.test (string));
