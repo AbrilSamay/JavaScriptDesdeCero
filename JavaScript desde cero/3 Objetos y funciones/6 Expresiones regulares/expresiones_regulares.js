@@ -32,13 +32,18 @@ let expReg1 = /Lorem/ig; //banderas al final
 
 // existen varias maneras de poder ejecutarles, pero esta vez nos quedaremos con test y exec 
 
-let string = `Lorem ipsum dolor sit amet. Sed veritatis fugiat ut tempora sequi id tempora Quis et maxime repellendus. Qui error quaerat ut odit quia et ratione ducimus et magnam recusandae a quos aliquam id corporis alias. Et consequatur animi eos libero tenetur nam unde accusamus est velit ducimus et soluta neque et consequatur velit.
+let string = `Lorem ipsum dolor  sit amet. Sed veritatis fugiat ut tempora sequi id tempora Quis et maxime repellendus. Qui error quaerat ut odit quia et ratione ducimus et magnam recusandae a quos aliquam id corporis alias. Et consequatur animi eos libero tenetur nam unde accusamus est velit ducimus et soluta neque et consequatur velit.
 Et odio reiciendis 33 culpa consectetur sed quas officia ea iusto neque. Aut aliquid fugiat sed incidunt expedita aut veritatis quisquam aut delectus repellat. Est libero ipsa non nostrum sapiente vel officiis quasi. `
 
 
-let expRegMethod = /lorem/ig;
+let expRegMethod = /lorem/i;
 
 //Test Method, este nos da un boolean como resultado, si se cumple nos dara true or false.
 
 console.log (expRegMethod.test(string)); // entre parentesis especificas en donde buscar 
 console.log (expRegMethod.exec(string)); // exec nos dara una busqueda mas precisa.
+
+/*
+ambos metodos son utiles pero, test solo nos dara un boolean (true false)
+mientras exec nos brindara informacion mas precisa dentro de un array.
+*/
