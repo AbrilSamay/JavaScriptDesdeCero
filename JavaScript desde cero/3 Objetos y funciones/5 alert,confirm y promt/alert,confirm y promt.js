@@ -22,6 +22,6 @@ let prompt1 = prompt('este es un prompt, sirve para que el usuario ingrese un va
 
 console.log (alert1);
 console.log (confirm1);
-console.log (prompt1);
+console.log (prompt1); // si se cancela nos dara el valor de null 
 
 // y esas son las maneras en que un usuario nos puede brindar datos y valores :)
