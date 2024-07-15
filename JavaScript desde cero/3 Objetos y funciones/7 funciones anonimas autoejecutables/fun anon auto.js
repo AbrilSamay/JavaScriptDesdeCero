@@ -37,3 +37,31 @@ una funcion con nombre es evidentemente una funcion nombrada y una no nombrada n
     c.log ('esto en un console.log ') // c se conviente en una abreviacion de console
 })(document,window,console);  // document, windown y console asignando valor a d, w y c respectivamente. 
 
+
+
+
+// hay varias formas de escribir estas funciones anonimas como tales:
+
+// Clasica 
+(function (){
+    console.log ('vercion clasica');
+})(); 
+
+// La crockford (javascript the good parts)
+((function (){
+    console.log ('versino crockford');
+})());
+
+// Unaria 
+
++ function (){
+    console.log ('version Unaria');
+}();
+
+// Facebook
+!function (){
+    console.log ('version facebook');
+}();
+
+
+// esto se hacia usualmente antes de la aparicion de los modulos que se veran en la siguiente clase.
