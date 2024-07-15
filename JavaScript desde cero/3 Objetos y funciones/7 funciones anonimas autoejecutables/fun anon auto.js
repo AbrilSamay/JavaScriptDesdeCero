@@ -14,3 +14,16 @@ una funcion con nombre es evidentemente una funcion nombrada y una no nombrada n
 
 
 */
+
+(function (){
+    let nombre = 'pablo';
+    console.log (`hola soy ${nombre} y esta iife no estra en conflcito con la segunda`);
+})();  // funcion dentro de parentesis para evitar errores de contexto. 
+                    // importane colocar puntos y comas al final 
+
+(function (){
+    let nombre = 'juan';
+    console.log (`hola soy ${nombre} y esta iife no entra en conflico con la primera`);
+})();
+
+// no hay conflictos entre ambas, y si nombre es borrada de una es como que no existiera 
