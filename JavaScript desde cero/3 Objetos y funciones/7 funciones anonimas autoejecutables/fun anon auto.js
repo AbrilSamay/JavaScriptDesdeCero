@@ -27,3 +27,13 @@ una funcion con nombre es evidentemente una funcion nombrada y una no nombrada n
 })();
 
 // no hay conflictos entre ambas, y si nombre es borrada de una es como que no existiera 
+
+
+
+          // d,w y c reciviendo valor desde los parentesis de afuera;
+(function (d,w,c){
+    console.log (d); // imprime document
+    console.log (w); // imprime window
+    c.log ('esto en un console.log ') // c se conviente en una abreviacion de console
+})(document,window,console);  // document, windown y console asignando valor a d, w y c respectivamente. 
+
