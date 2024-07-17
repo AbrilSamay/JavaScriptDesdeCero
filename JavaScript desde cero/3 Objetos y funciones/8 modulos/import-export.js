@@ -1,3 +1,5 @@
+import {array} from "./constantes.js";
+import {methods} from "./methods.js";
 /*
 Module
 ------
@@ -21,4 +23,24 @@ agregar una etiqueta al final con el valor "nomodule"
 
 
 ORDENAMIENTO DE CODIGO
+----------------------
+
+1- importacion de modules
+2- declaracion de variables 
+3- declaracion de funciones
+4- ejecucion de codigo
+
+
+Como mandar a llamar archivos js desde js ?
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+1/ crear los archivos necesarios 
+2/ colocar export en el archivo que vamos a enviar
+3/ Colocal "import {} from " en el archivo donde llamaremos 
+4/ Colocar la carpeta en donde esta en el from "./Carpeta"
+5/ coloca ./ al inicio del from, ./ significa buscar 
+
 */
+
+console.log (array, methods.sumar(3,4))
