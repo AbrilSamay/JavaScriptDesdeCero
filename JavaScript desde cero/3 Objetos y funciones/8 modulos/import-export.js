@@ -1,5 +1,6 @@
-import {array} from "./constantes.js";
+import saludar, {array} from "./constantes.js";
 import {methods} from "./methods.js";
+
 /*
 Module
 ------
@@ -44,3 +45,4 @@ Como mandar a llamar archivos js desde js ?
 */
 
 console.log (array, methods.sumar(3,4))
+saludar() // se agrega automaticamente y se ejecuta solo :)
