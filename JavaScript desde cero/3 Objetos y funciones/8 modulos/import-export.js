@@ -54,4 +54,29 @@ indicando que de esa manera se priorize esa exportacion
 
 export default function pan (){
 console.log ('hola')}
+
+
+importante, no se pueden mandar por default una funcion expresada, solo funciones declaradas 
+esto pasa por en la maner en la que funcionan las funciones en javascript, con una funcion 
+declarada se puede hacer perfertamente por el hoisting de javascript, entonces a la hora de 
+enviar ya esta cargada y con su valor asignado.
+Pero esto no pasa con las funciones expresadas o con las variables y constantes 
+aqui un ejemplo:
 */
+
+// export default const random = 1;      NOOOOO!
+
+/*
+Esto no se puede hacer ya que al momento de crear una importacion por default, esta sera 
+lo primero en cargar, por ende se estara enviando antes de que esta tenga siquiera un 
+valor asignado y nos marcara error.
+
+La manera correcta a continuacion:
+
+*/
+
+
+let random2 = 34; export default random2; 
+
+ 
+
