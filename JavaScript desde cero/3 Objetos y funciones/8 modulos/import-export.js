@@ -46,3 +46,12 @@ Como mandar a llamar archivos js desde js ?
 
 console.log (array, methods.sumar(3,4))
 saludar() // se agrega automaticamente y se ejecuta solo :)
+
+/*
+Si tu necesitas que algo se ejecute despues de haberse creado, o necesitas 
+que algo se cargue prioritariamente puedes utlizar default despues de la exportacion 
+indicando que de esa manera se priorize esa exportacion 
+
+export default function pan (){
+console.log ('hola')}
+*/
