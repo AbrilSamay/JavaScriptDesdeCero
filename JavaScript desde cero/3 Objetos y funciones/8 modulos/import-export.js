@@ -79,4 +79,22 @@ La manera correcta a continuacion:
 let random2 = 34; export default random2; 
 
  
+/*
+En resumen las funciones expresadas, variables y constantes se tienen que exportar 
+una ves estas ya han cargado, para evitar todos los errores.
 
+algo que tambien se puede hacer con los modules is agregar nicknames a las variables 
+y funciones que exportamos 
+
+aqui un ejemplo:
+*/
+
+//NO EXPORTAR ABAJO, SOLO EL POR EL EJEMPLO 
+
+import { constante as loquequieras} from "./constantes.js";
+
+console.log (loquequieras)
+
+// agregamos la exportacion y agregamos 'as' y la redefinimos a nuestro gusto 
+// bastante similar a lo que encontramos en reacte
+// hasta aca la clase de los modulos.
