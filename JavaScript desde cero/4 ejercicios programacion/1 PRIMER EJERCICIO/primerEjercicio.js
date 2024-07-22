@@ -1,67 +1,46 @@
+console.log (`1 Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.`)
 
 /*
-1 Programa una función que cuente el número de caracteres
- de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+1 Programa una función que cuente el cuantos caracteres tiene un texto,
+ pe. miFuncion("Hola Mundo") devolverá 10.
+ tienes que asegurarte de siempre resivir el tipo de dato correcto
  */
 
-console.log (`1 Programa una función que cuente el número de caracteres
- de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.`)
 
-const contarCaracteres = function (string){
-    let total = string.length
-    console.log (`el texto:${string} tiene: ${total}`)
-    console.log(total)
-};
-contarCaracteres('me gusta pilin');
+ let stringA = prompt ('ingrese el texto')
+ let expRegString = /[^a-zA-Z\s,]/; // si tiene un caracter especial;
+ let expRegStringResult = expRegString.test(stringA);
 
-/*
-2) Programa una función que te devuelva el texto recortado según el 
-número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
-*/
 
-console.log (`2) Programa una función que te devuelva el texto recortado según el 
-número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".`)
+ const isNullOrEmpty = function (stringA){
+    return !stringA || stringA === "";
+ }
+ if (isNullOrEmpty(stringA)) {
+    alert ('Ingresa un texto');
+    location.reload();
+ } else {
+    if (expRegStringResult) {
+        alert('No se permiten caracteres especiales!');
+        location.reload();
+    } else {
+       let confirmValue =confirm(`El texto ingresado es "${stringA}" deseas continuar ?`);
+       if (!confirmValue) {
+        alert('entendido')
+       } else {
+        const pruebax = function (){
+            let total = stringA.length;
+            console.log (total);
+            console.log (`el texto "${stringA}" tiene ${total} caracteres`);
+            alert(`el texto "${stringA}" tiene ${total} caracteres`);
+         };
+         pruebax ();
+       }
+    };
+    
+ };
 
-const cortarCaracteres = function (string,numeroCortar){
-    let nuevo = string.substring(0,numeroCortar);
-    console.log (`el texto: ${string} se cortara en: ${numeroCortar} quedando: ${nuevo}`);
-    return nuevo
-}
 
-console.log (cortarCaracteres('Hola Mundo',4))
 
-/*
-3) Programa una función que dada una String te devuelva un Array de textos
- separados por cierto caracter, pe. miFuncion('hola que tal', ' ') 
- devolverá ['hola', 'que', 'tal'].
-*/
 
-console.log (`3) Programa una función que dada una String te devuelva un Array de textos
- separados por cierto caracter, pe. miFuncion('hola que tal', ' ') 
- devolverá ['hola', 'que', 'tal'].`)
 
-const devorArray = function (string,valor){
-    let partir = string.split (valor)
-    console.log (`el texto ${string} dividido por sus espacios seria: ${partir}`)
-    console.log (partir);
-};
-
-devorArray ('hola que tal'," ");
-
-/*
-4) Programa una función que repita un texto X veces,
- pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
-*/
-
-console.log (`4) Programa una función que repita un texto X veces, 
-pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.`);
-
-const numeroVeces = function (string,valor1){
-    console.log ( `el texto ${string}, se mandara a la consola ${valor1} de veces`)
-    for (let i = 1; i < valor1; i++) { 
-        console.log (string,i);
-    }
-    console.log (string, valor1);
-}
-
-numeroVeces('HOLA ',9)
+ 
