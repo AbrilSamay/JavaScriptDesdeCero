@@ -38,9 +38,3 @@ console.log (`1 Programa una función que cuente el número de caracteres de una
     };
     
  };
-
-
-
-// dato aleatorio
-
- 
