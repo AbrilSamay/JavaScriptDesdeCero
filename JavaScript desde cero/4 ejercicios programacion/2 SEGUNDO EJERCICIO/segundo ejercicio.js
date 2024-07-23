@@ -13,3 +13,5 @@ const cortarCaracteres = function (string,numeroCortar){
 }
 
 console.log (cortarCaracteres('Hola Mundo',4));
+
+
