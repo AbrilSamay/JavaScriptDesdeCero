@@ -5,7 +5,7 @@ número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola
 
 
 
-let expRegInputValue =  /[^a-zA-Z\s,]/; // special characters 
+let expRegInputValue =  /[^a-zA-Z\s0-9,]/; // special characters 
 let inputValue = prompt ('ingrese el texto a cortar ');
 let inputValueTrim = inputValue.trim();
 let expRegInputValueResult = expRegInputValue.test (inputValue)
@@ -30,14 +30,14 @@ if (!inputValue) {
                let cutTrim = cut.trim()
                let cutResultExpReg = expRegInputNumberValue.test (cutTrim);
                console.log (cutTrim)
-               if (cutResultExpReg){
+               if (cutResultExpReg || !cutTrim){
                    alert('ingresa un numero');
                    continue;
                } else {
                 console.log ('se esta ejecutando esto ?')
                    function cortarCaracteres (cutTrim){
                        let result = inputValueTrim.substring (0, cutTrim);
-                       alert (`el resultado es ${result}`);
+                       alert (`el resultado es: ${result}`);
                     } 
                     cortarCaracteres (cutTrim);
                     break;
@@ -47,6 +47,7 @@ if (!inputValue) {
     }
 }
 
-//console.log (`2) Programa una función que te devuelva el texto recortado según el 
-//número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".`)
+/*console.log (`2) Programa una función que te devuelva un texto recortado
+ según el número de caracteres indicados,
+ pe. miFuncion("Hola Mundo", 4) devolverá "Hola".`)*/
 
