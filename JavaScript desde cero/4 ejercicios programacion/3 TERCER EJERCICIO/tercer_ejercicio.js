@@ -40,3 +40,4 @@ const devorArray = function (string,valor){
 };
 
 devorArray ('hola que tal'," ");
+// complete 
