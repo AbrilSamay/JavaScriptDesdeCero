@@ -1,20 +1,24 @@
 
 
 
-/*
-4) Programa una función que repita un texto X veces,
- pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
-*/
-
 console.log (`4) Programa una función que repita un texto X veces, 
 pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.`);
 
-const numeroVeces = function (string,valor1){
-    console.log ( `el texto ${string}, se mandara a la consola ${valor1} de veces`)
-    for (let i = 1; i < valor1; i++) { 
-        console.log (string,i);
+let emptyArray = [];
+let valorimprimir = 8;
+const numeroVeces = function (inputExpReg,valorimprimir){
+    console.log ( `el texto ${inputExpReg}, se mandara a la consola ${5} de veces`)
+
+
+
+    
+    for (let i = 1; i < valorimprimir; i++) { 
+        console.log (inputExpReg,i);
+        emptyArray.push(inputExpReg);
     }
-    console.log (string, valor1);
+    console.log (emptyArray,'este es el bueno');    
+    alert (emptyArray);
 }
+
 
 numeroVeces('HOLA ',9)
