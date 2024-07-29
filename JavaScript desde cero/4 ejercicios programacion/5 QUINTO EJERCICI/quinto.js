@@ -1,4 +1,5 @@
-//5) Programa una función que invierta las palabras de una cadena de texto
+//5) Programa una función que invierta 
+//las palabras de una cadena de texto
 //, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
 
 
@@ -8,14 +9,21 @@
 // join (join a string together);
 
 
-let string = 'hola mama';
-console.log (`"${string}" input`)
-const upsideDown = (string) => {
-    let result = string.split ('').reverse ().join ('');
+let expRegInput = /[^a-zA-Z\s,]/;  // a-z characters 
+let input = prompt('ingrese el texto').trim();
+let expRegInputResult = expRegInput.test (input);
+
+const upsideDown = (input) => {
+    let result = input.split ('').reverse ().join ('');
     console.log (`"${result}" output`);
+    alert (`el texto: : "${input}" al reves es: ${result}`)
 };
-upsideDown (string);
+
+if (expRegInputResult) {
+    alert('ingrese un valor valido');
+} else {
+    upsideDown (input);
+};
 
 
 
-let expRegInput = /[^a-zA-Z\s]/; 
