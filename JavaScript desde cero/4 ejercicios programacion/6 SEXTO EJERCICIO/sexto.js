@@ -25,4 +25,4 @@ const comprobar = (texto, input) => {
 return console.info (contador)
 }
 
-comprobar (texto,input) //
+comprobar (texto,input) 
