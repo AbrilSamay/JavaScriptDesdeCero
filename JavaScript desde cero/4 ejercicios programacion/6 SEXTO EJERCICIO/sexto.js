@@ -25,7 +25,9 @@ const buscardor = (input) => {
         }
     }
 
-    console.log (`en el texto "${valorInput}" se encontraron ${counter} "${valorInput[1].trim()}"`);
+    alert (`en el texto "${valorInput}" se encontraron ${counter} "${valorInput[1].trim()}"`);
 }
 
-buscardor (input)
+buscardor (input);
+
+// complete 
