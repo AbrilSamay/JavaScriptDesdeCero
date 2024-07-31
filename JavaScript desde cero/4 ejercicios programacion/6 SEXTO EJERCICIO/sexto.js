@@ -1,25 +1,31 @@
+
+
 /* 6) Programa una función para contar el número de veces 
 que se repite una palabra en un texto largo
 , pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
  */
 
 
-let input = prompt ('ingrese texto en el cual buscar ');
-let toSearh = prompt ('ingrese palabra a buscar');
+let input = prompt ('ingrese texto en el que se buscara, caracter a buscar');
 
-const comprobar = (input) => {
-    if (!input) return console.log ('no has ingresado un texto valido');
-        let test  = 0;
-        let counter = 0;
-        while (test !== -1 ){
-            test = input.indexOf (toSearh, test);
-            if (test !== -1) {
-                counter++
-                test++
-                console.log ('ejecutandose')
-            }
+
+const buscardor = (input) => {
+    if (!input) return console.log ('no has ingresado ningun valor');
+    let valorInput = input.trim().split(',');
+
+    let value = 0;
+    let counter = 0;
+
+    while (value !==-1){
+        value = valorInput[0].trim().indexOf (valorInput[1].trim(),value);
+
+        if (value !== -1) {
+            counter ++;
+            value++;
         }
-        console.log  (test,counter,'this is the result')
-};
+    }
 
-comprobar (input)
+    console.log (`en el texto "${valorInput}" se encontraron ${counter} "${valorInput[1].trim()}"`);
+}
+
+buscardor (input)
