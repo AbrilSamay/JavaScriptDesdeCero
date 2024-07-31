@@ -2,27 +2,24 @@
 que se repite una palabra en un texto largo
 , pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
  */
-const texto = ('un monton de texto que esta saliendo presuere cualquier cosa pan pan panpan')
-const input = prompt ('palabra clave');
 
-let test = texto.indexOf (input);
-console.log (test)
 
-const comprobar = (texto, input) => {
-    if (!texto) return console.warn ('no hay nada que buscar');
-    if (!input) return console.warn ('no ingresaste una palabra clave');
-    
-    valor = 0;
-    contador = 0;
-    while (valor !== -1){
-        valor = texto.indexOf (input,valor);
-        if (valor !== -1) {
-            contador++;
-            console.log (contador)
+let input = prompt ('ingrese texto en el cual buscar ');
+let toSearh = prompt ('ingrese palabra a buscar');
+
+const comprobar = (input) => {
+    if (!input) return console.log ('no has ingresado un texto valido');
+        let test  = 0;
+        let counter = 0;
+        while (test !== -1 ){
+            test = input.indexOf (toSearh, test);
+            if (test !== -1) {
+                counter++
+                test++
+                console.log ('ejecutandose')
+            }
         }
-        console.log (input,contador)
-    }
-return console.info (contador)
-}
+        console.log  (test,counter,'this is the result')
+};
 
-comprobar (texto,input) 
+comprobar (input)
