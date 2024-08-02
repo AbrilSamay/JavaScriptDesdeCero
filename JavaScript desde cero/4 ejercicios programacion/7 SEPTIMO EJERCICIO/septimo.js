@@ -26,3 +26,5 @@ const toSearch = (text,input) => {
 } 
 
 if (!text || !input) {'no se han ingresado algunos valores'} else { toSearch (text,input)};
+
+// complete 
