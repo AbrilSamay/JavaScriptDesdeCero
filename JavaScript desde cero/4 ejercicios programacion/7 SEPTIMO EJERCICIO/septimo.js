@@ -1,30 +1,17 @@
-// septimo ejercicio
-
-/*
-6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, 
-pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
-*/
+/* 7) Programa una función que valide si una palabra o frase dada,
+ es un palíndromo (que se lee igual en un sentido que en otro),
+  pe. mifuncion("Salas") devolverá true. */
 
 
-let text = prompt ('ingrese texto en el que se buscara');
-let input = prompt ('ingrese texto el cual buscar');
 
-const toSearch = (text,input) => {
-    let counter = 0;
-    let value = 0;
+  let test1 = prompt ('igresa el texto');
+  let upsideDown = test1.split('').reverse().join("");
+  console.log (test1,upsideDown)
 
-    while( value !== -1){
-        value = text.indexOf(input, value);
+  let result = function (test1,upsideDown){
+    if (test1 == upsideDown) console.log (true);
+  };
 
-        if (value !== -1){
-            counter++;
-            value++;
-        }
+  result (test1,upsideDown);
 
-    }
-    alert (`Se encontraron: "${counter} ${input}" en el texto "${text}"`)
-} 
-
-if (!text || !input) {'no se han ingresado algunos valores'} else { toSearch (text,input)};
-
-// complete 
+  console.log (result)
