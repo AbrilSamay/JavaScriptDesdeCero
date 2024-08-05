@@ -4,14 +4,15 @@
 
 
 
-  let test1 = prompt ('igresa el texto');
-  let upsideDown = test1.split('').reverse().join("");
-  console.log (test1,upsideDown)
+  let test1 = prompt ('igresa el texto').trim().toLowerCase();
 
-  let result = function (test1,upsideDown){
-    if (test1 == upsideDown) console.log (true);
+  const palindromo = (test1 = "") => {
+    if (!test1) return alert ('no has ingresado un valor');
+      let upsideDown = test1.split('').reverse().join("");
+
+      return (test1 === upsideDown)
+      ? alert (`la palabra "${test1}" es palindromo VERDADERO`)
+      : alert (`la palabra "${test1}" no se palindromo FALSO`)
   };
 
-  result (test1,upsideDown);
-
-  console.log (result)
+  palindromo (test1);
