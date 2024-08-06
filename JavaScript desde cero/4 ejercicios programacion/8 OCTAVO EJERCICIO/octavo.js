@@ -10,3 +10,5 @@ const replaceFunction = (test,input) => {
     if (!test || !input) return alert ('no has ingresado correctamente los datos');
     alert (`El texto resurtante es: ${test.replaceAll(input,'')} `);
 };
+
+//testing
