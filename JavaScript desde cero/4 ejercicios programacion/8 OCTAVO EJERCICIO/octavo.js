@@ -11,4 +11,6 @@ const replaceFunction = (test,input) => {
     alert (`El texto resurtante es: ${test.replaceAll(input,'')} `);
 };
 
+replaceFunction (test,input);
+
 // complete ^-^
