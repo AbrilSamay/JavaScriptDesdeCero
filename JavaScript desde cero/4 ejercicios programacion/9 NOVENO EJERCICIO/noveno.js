@@ -14,7 +14,7 @@ function random  (inputMin,inputMax) {
 } 
 random (inputMin,inputMax);
 
-// TESTING
+// DONE
 
 
 
