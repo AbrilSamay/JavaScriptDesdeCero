@@ -17,4 +17,4 @@
 
   palindromo (test1);
 
-  // complete ^-^
+  // complete ^-^si es capicúa
