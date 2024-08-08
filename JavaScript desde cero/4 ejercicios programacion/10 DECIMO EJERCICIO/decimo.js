@@ -7,6 +7,7 @@ input = String (input);
 
 
 const capicua = (input) => {
+    if (!input) return alert ('ingresa un valor');
     let reverse = input.split ('').reverse().join('');
     return (reverse === input)
     ? alert (`"${input}"al reves es "${reverse}" por lo tanto, SI es capicúa TRUE`)
@@ -14,4 +15,4 @@ const capicua = (input) => {
 };
 capicua (input);
 
-// TESTING
+// COMPLETE
