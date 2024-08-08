@@ -13,3 +13,5 @@ const capicua = (input) => {
     : alert (`"${input}" al reves es "${reverse}" por lo tanto NO es capicúa FALSE`);
 };
 capicua (input);
+
+// TESTING
