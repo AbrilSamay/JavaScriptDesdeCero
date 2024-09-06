@@ -4,3 +4,4 @@ estare llevando las cosas aprendidas por mi persona asi como las practicas que n
 para aprender
 
 si deseas darme algun consejo. soy todo oidos c:
+"# JavaScriptFromZero" 
