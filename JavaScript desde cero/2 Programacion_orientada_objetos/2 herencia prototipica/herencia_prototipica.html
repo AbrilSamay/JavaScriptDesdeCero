@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../herencia prototipica/herencia_prototipica.js"></script>
+</head>
+<body>
+    <h1>console f12
+        
+    </h1>
+    <script>
+        //Prueba para ver si estoy aprendiendo que es una funcion constructiva
+
+        /* que es un prototipo ?? es  un modelo a seguir para en el cual vasarnos para poder 
+        crear instancias automaticamente, cuando creemos una variable por ejemplo, esta va a perntener
+        a un 'objeto madre', del cual provendra todo lo que le hayamos indicado. */
+
+        
+        // para comenzar creamos una funcion constructiva
+
+        function Animales (raza,sexo, tipoDe){
+    // asignamos los atributos dentro de la funcion constructiva:
+
+    
+    this.raza = raza;
+    this.sexo = sexo;
+    this.tipoDe = tipoDe;
+}
+
+Animales.prototype.say = function (){
+    console.log (`Soy un ${this.tipoDe} y soy de la raza ${this.raza} y mi sexo es ${this.sexo}`)
+}
+
+const animal1 = new Animales ('siberiano', 'hembra', 'perro')
+
+console.log (animal1.say()) // FUNCIONAAAAAAAAAAAAAAAAAAAAAAA HAHAHHAHAHAHHAHAHAHA
+
+// ahora voy a ver si me sale la herencia prototipica. si no me equivo se hace de la siguiente manera.
+/* En primer lugar que es herencia prototipica, es cuando una segunda funcion constructiva copia
+los metodos y los prototipos de la funcion madre.
+
+
+funcion hija:
+*/
+
+function Animal2 (raza,sexo, tipoDe, salud){
+    this.super = Animales;
+    this.super (raza,sexo,tipoDe);
+    this.salud = salud;
+    
+}
+
+Animal2.prototype = new Animales;
+Animal2.prototype.constructor = Animal2;
+
+Animal2.prototype.cualquierCosa = function (){
+    console.log ('aparentemente esta funcionando', this.salud)
+}
+
+const mirequenose = new Animal2 ('aguacatero','gay','gato','gracias ya comi'), tampocoseyo = new Animal2 ('si','no','probablemente','no hay')
+
+
+console.log (mirequenose.say(), tampocoseyo.cualquierCosa())
+
+
+    </script>
+</body>
+</html>
