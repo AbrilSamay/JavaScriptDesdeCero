@@ -15,5 +15,4 @@
 
   emailPattern ();
 
-  // COMPLETE
-//
+  // COMP
