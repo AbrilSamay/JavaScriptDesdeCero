@@ -14,7 +14,7 @@ const cuadrado = () => {
     let input = prompt('Ingrese los numeros a elevarse al cuadrado separados por coma \n (23,3,4,etc) LETRAS NO PERMITIDAS').trim().split(',');
     let result = [];
 
-    if (!/[0-9,]/.test (input)) {
+    if (input.some(num => isNaN (num))){
         alert ('Solo numeros permitidos!');
         return;
     }
@@ -31,4 +31,3 @@ const cuadrado = () => {
 cuadrado ()
 
 
-// TESTING AND IMPROVING 
