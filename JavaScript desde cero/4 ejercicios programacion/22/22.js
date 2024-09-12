@@ -47,4 +47,3 @@ function higer() {
 
 higer();
 
-//
