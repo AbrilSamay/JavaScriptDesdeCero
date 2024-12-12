@@ -30,4 +30,6 @@ console.log (`Los numeros impares son: ${impar}`);
 }
 
 arrange (inputSpliten);
+
+// could be better, but its alrigth
  
