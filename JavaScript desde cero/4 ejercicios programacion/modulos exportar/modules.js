@@ -9,3 +9,14 @@ export let numbersFT = {
 function nm (numero) {
     return Number (numero);
 };
+
+
+// Corrobar si en number
+
+function notANumber (something){
+    return isNaN (something);
+};
+
+export let notANumberObject = {
+    notANumber : notANumber
+};
