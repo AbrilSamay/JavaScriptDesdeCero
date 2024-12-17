@@ -9,42 +9,19 @@ un array devuelva el número mas alto
 */
 
 
-function higer() {
-    const input = prompt('Ingrese el listado de números separados por una coma \n (Ej: 2,34,-4,4). LETRAS NO PERMITIDAS').trim();
 
-    // Verificar si no ingresaron nada
-    if (!input) {
-        alert('No has ingresado un valor');
-        return;
-    }
+const arrayMaxMin = (input) => { 
 
-    const inputArray = input.split(',');
+    // validaciones 
+    if (input === undefined) return console.warn ("no ingresaste ningun valor ");
+    if (!(input instanceof Array )) return console.error ("el valor ingresado no es un array")
+    if (input.length === 0) return console.erro ("el arreglo esta vacio");
+    for (const num of input) {
+        if (typeof num !== "number") return console.error (`El valor ${num} NO ES UN NUMERO`);
+        };
 
-    // Verificar si no es un array o contiene solo valores vacíos
-    if (!Array.isArray(inputArray) || inputArray.length === 0) {
-        alert('El valor ingresado no es un array válido');
-        return;
-    }
-
-    // Convertir cada elemento del array en un número y validar
-    const numbers = inputArray.map(element => element.trim());
-
-    for (let element of numbers) {
-        if (isNaN(element) || element === "") {
-            alert(`${element} no es un número válido`);
-            return;
-        }
-    }
+    return console.info (`Arreglo original: ${input} \n Valor mayor ${Math.max(...input)} \n Valor menor ${Math.min (...input)}`);
     
-    // Convertir los elementos válidos en números
-    const parsedNumbers = numbers.map(Number);
-
-    const max = Math.max(...parsedNumbers);
-    const min = Math.min(...parsedNumbers);
-    
-    console.log(`En el array ingresado: "${input}"\nEl número de mayor valor es: ${max}\nEl número de menor valor es: ${min}`);
 }
 
-higer();
-
-// COMPLETE
+arrayMaxMin ([2,9,6,7,8,8,7]);

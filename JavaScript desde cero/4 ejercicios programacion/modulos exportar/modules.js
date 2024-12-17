@@ -1,3 +1,19 @@
+// Exportando el objeto
+export let lista;
+
+
+// Función para verificar si el input es un número
+function esNumero(input) {
+    return typeof input === 'number' && !isNaN(input);
+}
+
+// Objeto que contiene la función
+const lista = {
+    esNumero 
+};
+
+
+
 
 
 // Pasar a number
@@ -8,15 +24,4 @@ export let numbersFT = {
 
 function nm (numero) {
     return Number (numero);
-};
-
-
-// Corrobar si en number
-
-function notANumber (something){
-    return isNaN (something);
-};
-
-export let notANumberObject = {
-    notANumber : notANumber
 };
