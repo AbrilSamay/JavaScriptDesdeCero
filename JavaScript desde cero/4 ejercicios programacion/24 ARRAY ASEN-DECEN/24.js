@@ -37,4 +37,4 @@ function arrayArrange (inputArray = undefined) {
 
 arrayArrange (inputArray);
 
-// testing
+// COMPLETE
