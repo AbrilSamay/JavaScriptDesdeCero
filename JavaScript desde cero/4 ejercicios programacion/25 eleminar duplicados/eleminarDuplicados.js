@@ -14,4 +14,6 @@ const duplicadosBuscar = (input) => {
 } 
 
 
-console.log (duplicadosBuscar(input)) // pretty good tbh well structed 
+console.log (duplicadosBuscar(input));
+
+// DONE 
