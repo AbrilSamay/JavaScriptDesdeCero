@@ -15,3 +15,5 @@ const promedio = (array) => {
 }
 
 promedio (palabras);
+
+// se debe de hacer con reduce y join
