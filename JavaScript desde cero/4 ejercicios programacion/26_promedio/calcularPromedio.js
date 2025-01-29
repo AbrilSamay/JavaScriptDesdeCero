@@ -1,6 +1,6 @@
 // 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
 
-const numeros = [2,3,4,5,6,7,8];
+const numeros = [3,2,1,1,9,8];
 
 
 const promedio = (array) => {
@@ -16,17 +16,17 @@ const promedio = (array) => {
 
 promedio (numeros);
 
-// se debe de hacer con reduce y join
+const promedioWithReduce = (array) => {
+  array.reduce ((suma , currentValue, index) => {
+    suma += currentValue
+    if (array.length !== (index + 1)) {
+      return suma 
+    } else {
+      console.log (`Array ingresado: ${array} \nLargo del array: ${array.length} \nSumar elementos del array: ${suma} \n la division seria: ${suma}/${array.length} \n PROMEDIO: ${Math.round(suma/array.length)}`)
+    }
+  });
 
-// Practica reduce 
+  
+}
 
-const palabras = ['Hola', 'mundo', 'lindo'];
-
-const frase = palabras.reduce((acumulador, valorActual) => {
-  return acumulador + ' ' + valorActual; // Concatenamos palabras con un espacio
-}, '');
-
-console.log(frase); // Salida: " Hola mundo lindo"
-
-
-// mas o menos entiendo
+promedioWithReduce (numeros);
