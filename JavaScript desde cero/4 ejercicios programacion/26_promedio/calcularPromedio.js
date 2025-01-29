@@ -29,4 +29,4 @@ const promedioWithReduce = (array) => {
   
 }
 
-promedioWithReduce (numeros); // testing
+promedioWithReduce (numeros); // 26 COMPLETE 
