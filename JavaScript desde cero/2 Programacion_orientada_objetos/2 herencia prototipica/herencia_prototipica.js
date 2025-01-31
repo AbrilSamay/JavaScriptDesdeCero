@@ -86,3 +86,20 @@ function Animal(nombre) {
   perro.hablar();  // Imprime: "Firulais hace un sonido."
   
 
+
+  // una mas para probar 
+  // creo la funcion como tal que es como una clase 
+
+  function Trabajadores (nombre, edad, horario) {
+    this.nombre = nombre;
+    this.edad = edad;
+    this.horario = horario;
+  }
+
+  Trabajadores.prototype.funcionParaTrabajadores = function () {
+    console.log (`Me llamo ${this.nombre} y tengo ${this.edad} years en el horario ${this.horario}`);
+  }
+
+  let trabajorJuan = new Trabajadores ("juan", 45, "que tin porta");
+  console.log (`nombre: ${trabajorJuan.nombre} \n edad: ${trabajorJuan.edad} \n horario: ${trabajorJuan.horario}`);
+  trabajorJuan.funcionParaTrabajadores ()
