@@ -63,4 +63,26 @@ Perro.prototype.ladrar = function(){
 
 const sofia = new Perro ('sofia','lesbica','aguacatera');
 console.log (sofia.saludar())
- // hola
+ 
+
+// REPASO DE HERENCIA PROTOTIPICA 
+
+
+// 1. Definimos la función constructora Animal
+function Animal(nombre) {
+    this.nombre = nombre;
+  }
+  
+  // 2. Agregamos un método al prototipo de Animal
+  Animal.prototype.hablar = function() {
+    console.log(this.nombre + " hace un sonido.");
+  };
+  
+  // 3. Creamos una instancia de Animal
+  let perro = new Animal("Firulais");
+  
+  // 4. Usamos el método 'hablar'
+  // Aunque 'perro' no tiene el método 'hablar' en sí mismo, lo encuentra en Animal.prototype.
+  perro.hablar();  // Imprime: "Firulais hace un sonido."
+  
+
