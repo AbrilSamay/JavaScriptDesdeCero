@@ -103,3 +103,5 @@ function Animal(nombre) {
   let trabajorJuan = new Trabajadores ("juan", 45, "que tin porta");
   console.log (`nombre: ${trabajorJuan.nombre} \n edad: ${trabajorJuan.edad} \n horario: ${trabajorJuan.horario}`);
   trabajorJuan.funcionParaTrabajadores ()
+
+  // seguimos maniana
