@@ -26,4 +26,3 @@ La clase recibirá un objeto al momento de instanciarse con los siguentes datos:
 
 */
 
-// no tengo idea de como hacer esto xd
