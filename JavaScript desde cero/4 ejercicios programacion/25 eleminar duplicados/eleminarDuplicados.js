@@ -5,15 +5,15 @@
   devolverá ["x", 10, 2, "10", true].
 */
 
-let input = [1,2,3,4,5,5]; // input donde se buscara.
+let input = [1,2,3,4,5,5,true, false, false]; // input donde se buscara.
 
 
 const duplicadosBuscar = (input) => {
-  const filtered = input.filter ((callBack,index,self) => self.indexOf (callBack) !== index);
-  return (console.log (`Array original: ${input} \nArray filtrado: ${filtered}`));
+  const filtered = input.filter ((callBack,index,self) => self.indexOf (callBack) == index);
+  return (console.log (`Array original: ${input} \n Elementos duplicados: ${filtered}`));
 } 
 
 
-console.log (duplicadosBuscar(input));
+duplicadosBuscar (input)
 
 // DONE 
