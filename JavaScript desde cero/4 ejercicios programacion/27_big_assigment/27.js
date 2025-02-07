@@ -6,9 +6,9 @@ La clase recibirá un objeto al momento de instanciarse con los siguentes datos:
     Todos los datos del objeto son obligatorios.
 
         Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
-                Valida que el título no rebase los 100 caracteres.
-                Valida que el director no rebase los 50 caracteres.
-                Valida que el año de estreno sea un número entero de 4 dígitos.
+        Valida que el título no rebase los 100 caracteres.
+        Valida que el director no rebase los 50 caracteres.
+        Valida que el año de estreno sea un número entero de 4 dígitos.
                  Valida que el país o paises sea introducidos en forma de arreglo.
                  Valida que los géneros sean introducidos en forma de arreglo.
                  Valida que los géneros introducidos esten dentro de los géneros aceptados*.
@@ -29,9 +29,9 @@ La clase recibirá un objeto al momento de instanciarse con los siguentes datos:
 class Pelicula {
     constructor ({ id, titulo, director, estreno, paises, genero, calificacion }){
         this.id = this.idValidator ('ID', id);
-        this.titulo = this.lenghtCheker ("titulo",titulo, 5) // tiene que ser 100, se usara 5 para test 
-        this. director = director;
-        this. estreno = estreno, 
+        this.titulo = this.lenghtCheker ("titulo",titulo, 100) // tiene que ser 100, se usara 5 para test 
+        this. director = this.lenghtCheker("Director", director, 50); // limite 50, se usara 2 para test
+        this. estreno = this.estrenoCheker ("Año de Estreno", estreno);
         this.paises = paises; 
         this.genero = genero;
         this.calificacion = calificacion;
@@ -63,12 +63,28 @@ class Pelicula {
 
     lenghtCheker (propiedad, instancia, cantidad){
         let copyInstancia = instancia;
-        if (!isNaN (copyInstancia)) copyInstancia = String.isString(copyInstancia)
+        if (!isNaN (copyInstancia)) copyInstancia = copyInstancia.toString ()
         if (this.isEmpty(propiedad, instancia)) {return}
         if (copyInstancia.length > cantidad) return console.warn (`La cantidad de caracteres ingresados '${copyInstancia}' en el ${propiedad} sobrepasa el limite \n contiene ${copyInstancia.length} caracteres cuando el limite es: ${cantidad}`);
     }
 
+    // corroborar year 
+
+    yearChecker(anio) {
+        const anioActual = new Date().getFullYear(); // Obtiene el año actual
+        if (!Number.isInteger(anio) || anio < 1800 || anio > anioActual) {
+            return console.warn (`El año ${anio} no es válido. Debe estar entre 1800 y ${anioActual}.`);
+        }
+    }
     
+
+    // corroborar si es un array
+
+    arrayChecker (propiedad,array) {
+     if (!Array.isArray (array)) {
+        return console.warn (`Los valores introducidos en ${propiedad} no estan en formato de array, introduciste: ${array} el cual no es un array \n ingresa los datos en formato de array para continuar`)
+     }
+    }
 
     /*
                     PROPOSITO UNICO FUNCIONES
@@ -81,14 +97,28 @@ class Pelicula {
         if (!/^[A-Za-z]{2}\d{7}$/.test(id)){ return console.warn (`El ${propiedad}: "${id}" no es un ID valido, asegurate que empieza por 2 letras y 7 numero \n (XX1234567) \n (ID VALIDATOR FUCTION)`)} 
     }
 
+
+
+    // estreno checker (admite number y string )
+
+    estrenoCheker (propiddad, estreno) {
+        let estrenoCopy = estreno;
+        if (!isNaN(estrenoCopy)) estrenoCopy =  Number (estreno)
+        if (this.isEmpty(propiddad, estreno)) return;
+        if (this.lenghtCheker (propiddad, estreno)) return;
+        // parte especifica 
+        console.log (estrenoCopy)
+        if (this.yearChecker (estrenoCopy)) return
+
+    }
 }
 
 
 const peliTest = new Pelicula ({
     id: 'xx1234567',
-    titulo: '12323456y',
-    director: "juan carlos",
-    estreno: 2025, 
+    titulo: "La toalla del mojado",
+    director: "Alex Merito",
+    estreno: '', 
     pais: ['h','h'],
     genero: ['Homosexual', "accion", 'caballo'],
     calificacionIMBD: 'ni perra idea'
