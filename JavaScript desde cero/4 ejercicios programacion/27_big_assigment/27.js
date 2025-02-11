@@ -32,7 +32,7 @@ class Pelicula {
         this.titulo = this.lenghtCheker ("titulo",titulo, 100) // tiene que ser 100, se usara 5 para test 
         this. director = this.lenghtCheker("Director", director, 50); // limite 50, se usara 2 para test
         this. estreno = this.estrenoCheker ("Año de Estreno", estreno);
-        this.paises = paises; 
+        this.paises = this.countryCheck ("Paises", paises)
         this.genero = genero;
         this.calificacion = calificacion;
     }
@@ -111,15 +111,22 @@ class Pelicula {
         if (this.yearChecker (estrenoCopy)) return
 
     }
+
+    countryCheck (proiedad, country) {
+        if (this.isEmpty (proiedad,country)|| this.isEmpty (proiedad, country) || this.arrayChecker (proiedad, country) ) return
+
+    }
 }
+
+
 
 
 const peliTest = new Pelicula ({
     id: 'xx1234567',
     titulo: "La toalla del mojado",
     director: "Alex Merito",
-    estreno: '', 
-    pais: ['h','h'],
+    estreno: '2004', 
+    paises: [],
     genero: ['Homosexual', "accion", 'caballo'],
     calificacionIMBD: 'ni perra idea'
 })
