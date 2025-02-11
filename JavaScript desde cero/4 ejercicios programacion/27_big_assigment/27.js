@@ -9,7 +9,7 @@ La clase recibirá un objeto al momento de instanciarse con los siguentes datos:
         Valida que el título no rebase los 100 caracteres.
         Valida que el director no rebase los 50 caracteres.
         Valida que el año de estreno sea un número entero de 4 dígitos.
-                 Valida que el país o paises sea introducidos en forma de arreglo.
+        Valida que el país o paises sea introducidos en forma de arreglo.
                  Valida que los géneros sean introducidos en forma de arreglo.
                  Valida que los géneros introducidos esten dentro de los géneros aceptados*.
 
@@ -33,7 +33,7 @@ class Pelicula {
         this. director = this.lenghtCheker("Director", director, 50); // limite 50, se usara 2 para test
         this. estreno = this.estrenoCheker ("Año de Estreno", estreno);
         this.paises = this.countryCheck ("Paises", paises)
-        this.genero = genero;
+        this.genero = this.generoCheck ('genero', genero)
         this.calificacion = calificacion;
     }
 
@@ -81,9 +81,8 @@ class Pelicula {
     // corroborar si es un array
 
     arrayChecker (propiedad,array) {
-     if (!Array.isArray (array)) {
-        return console.warn (`Los valores introducidos en ${propiedad} no estan en formato de array, introduciste: ${array} el cual no es un array \n ingresa los datos en formato de array para continuar`)
-     }
+     if (!Array.isArray (array)) {return console.warn (`Los valores introducidos en ${propiedad} no estan en formato de array, introduciste: ${array} el cual no es un array \n ingresa los datos en formato de array para continuar \n (IS ARRAY CHECKER)`)}
+     if (array.length === 0) return console.warn (`Los elementos en ${propiedad} esta vacio, ingresa los paises en formato arary \n (ARRAY CHECKER SECOND IF)` )
     }
 
     /*
@@ -112,9 +111,21 @@ class Pelicula {
 
     }
 
+    /* country check ( verifica que no este vacio, y que no sean numeros ) */
     countryCheck (proiedad, country) {
-        if (this.isEmpty (proiedad,country)|| this.isEmpty (proiedad, country) || this.arrayChecker (proiedad, country) ) return
+        if (this.isEmpty (proiedad, country) || this.arrayChecker (proiedad, country)  ) return
+        if (!country.every(elemento => typeof elemento === "string" && elemento.trim().length > 0)) return console.warn (`El valor ${country} en ${proiedad} tiene elementos que no son letras`)
+    }
 
+    // genero check, corrobora los generos aceptados 
+
+    generoCheck(pro, genero) {
+        if (this.arrayChecker(pro, genero)) return; // Corroborar las predeterminadas 
+        const regExGenerosNoPermitidos = /^(?!Action|Adult|Adventure|Animation|Biography|Comedy|Crime|Documentary|Drama|Family|Fantasy|Film Noir|Game-Show|History|Horror|Musical|Music|Mystery|News|Reality-TV|Romance|Sci-Fi|Short|Sport|Talk-Show|Thriller|War|Western$).*$/i;
+        const noAceptados = genero.filter(g => regExGenerosNoPermitidos.test(g.trim()));
+        if (noAceptados.length > 0) {
+            console.warn(`Los siguientes géneros no son permitidos: ${noAceptados.join(", ")}`);
+        }
     }
 }
 
@@ -126,8 +137,8 @@ const peliTest = new Pelicula ({
     titulo: "La toalla del mojado",
     director: "Alex Merito",
     estreno: '2004', 
-    paises: [],
-    genero: ['Homosexual', "accion", 'caballo'],
+    paises: ["Honduras"],
+    genero: [' action', 'animation', 'pan', 'comedy', 'algo random'],
     calificacionIMBD: 'ni perra idea'
 })
 
