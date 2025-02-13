@@ -12,12 +12,12 @@ La clase recibirá un objeto al momento de instanciarse con los siguentes datos:
         Valida que el país o paises sea introducidos en forma de arreglo.
         Valida que los géneros sean introducidos en forma de arreglo.
         Valida que los géneros introducidos esten dentro de los géneros aceptados*.
-                 Crea un método estático que devuelva los géneros aceptados*.
-                 Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
-                 Crea un método que devuelva toda la ficha técnica de la película.
-                 Apartir de un arreglo con la información de 3 películas genera 3 
-                 instancias de la clase de forma automatizada e imprime la ficha técnica 
-                 de cada película.
+        Crea un método estático que devuelva los géneros aceptados*.
+        Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
+        Crea un método que devuelva toda la ficha técnica de la película.
+        Apartir de un arreglo con la información de 3 películas genera 3 
+        instancias de la clase de forma automatizada e imprime la ficha técnica 
+        de cada película.
 
     Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
 
@@ -25,19 +25,28 @@ La clase recibirá un objeto al momento de instanciarse con los siguentes datos:
 
 class Pelicula {
 
+    // metodo estatico 
+
     static generos(){
         return console.info (`Los generos aceptados son: ${Pelicula.generosPermitidos.join(", ")}`)
     }
-    constructor ({ id, titulo, director, estreno, paises, genero, calificacion }){
-        this.id = this.idValidator ('ID', id);
-        this.titulo = this.lenghtCheker ("titulo",titulo, 100) // tiene que ser 100, se usara 5 para test 
-        this. director = this.lenghtCheker("Director", director, 50); // limite 50, se usara 2 para test
+
+
+    // funcion constructora de la clase
+
+    constructor ({ id, titulo, director, estreno, paises, genero, calificacionIMBD }){
+        this.id = this.idValidator("id", id)
+        this.titulo = titulo
+        this.lenghtCheker ("titulo",titulo, 100) // tiene que ser 100, se usara 5 para test 
+        this. director = director
+        this.lenghtCheker("Director", director, 50); // limite 50, se usara 2 para test
         this. estreno = this.estrenoCheker ("Año de Estreno", estreno);
         this.paises = this.countryCheck ("Paises", paises)
         this.genero = this.generoCheck ('genero', genero)
-        this.calificacion = calificacion;
+        this.calificacion = this.calificacionCheck ("calificacion", calificacionIMBD);
     }
 
+    // propiedad estatica 
     
     static get generosPermitidos () {
         return [ "Action", "Adult", "Adventure", "Animation", "Biography", "Comedy", "Crime", 
@@ -95,6 +104,15 @@ class Pelicula {
      if (array.length === 0) return console.warn (`Los elementos en ${propiedad} esta vacio, ingresa los paises en formato arary \n (ARRAY CHECKER SECOND IF)` )
     }
 
+
+    // comprobar si es un number 
+
+    isANumber (propiedad, number) {
+        if (isNaN (number)) return console.warn (`El elemento introducido ${number} en ${propiedad} no es un numero, asegurato de introducir solo numeros \n IS NUMBER FUNCTION`);
+    }
+
+
+
     /*
                     PROPOSITO UNICO FUNCIONES
                     -------------------------
@@ -104,6 +122,7 @@ class Pelicula {
      idValidator (propiedad, id){
         if (this.isEmpty (propiedad, id)) {return}
         if (!/^[A-Za-z]{2}\d{7}$/.test(id)){ return console.warn (`El ${propiedad}: "${id}" no es un ID valido, asegurate que empieza por 2 letras y 7 numero \n (XX1234567) \n (ID VALIDATOR FUCTION)`)} 
+        return id;
     }
 
 
@@ -118,13 +137,14 @@ class Pelicula {
         // parte especifica 
         console.log (estrenoCopy)
         if (this.yearChecker (estrenoCopy)) return
-
+        return estreno;
     }
 
     /* country check ( verifica que no este vacio, y que no sean numeros ) */
     countryCheck (proiedad, country) {
         if (this.isEmpty (proiedad, country) || this.arrayChecker (proiedad, country)  ) return
         if (!country.every(elemento => typeof elemento === "string" && elemento.trim().length > 0)) return console.warn (`El valor ${country} en ${proiedad} tiene elementos que no son letras`)
+        return country;
     }
 
     // genero check, corrobora los generos aceptados 
@@ -134,23 +154,69 @@ class Pelicula {
         const regExGenerosNoPermitidos = /^(?!Action|Adult|Adventure|Animation|Biography|Comedy|Crime|Documentary|Drama|Family|Fantasy|Film Noir|Game-Show|History|Horror|Musical|Music|Mystery|News|Reality-TV|Romance|Sci-Fi|Short|Sport|Talk-Show|Thriller|War|Western$).*$/i;
         const noAceptados = genero.filter(g => regExGenerosNoPermitidos.test(g.trim()));
         if (noAceptados.length > 0) {
-            console.warn(`Los siguientes géneros no son permitidos: ${noAceptados.join(", ")}`);
+            console.warn(`Los siguientes géneros no son permitidos: ${noAceptados.join(", ")} \n los generos aceptados son los siguientes: ${Pelicula.generosPermitidos}`);
         }
+        return genero;
+    }
+
+    // calificacion checker
+
+    calificacionCheck (pro, calificacion) {
+        if (this.isEmpty(pro,calificacion)) return
+        if (this.isANumber(pro,calificacion)) return
+        if (calificacion > 10 || calificacion < 0) return console.warn (`El dato ${calificacion} ingresado en: ${pro} no es valido, asegurate de selo ingresar numeros entre 0 y 10`);
+        let calificacionCopy = 0;
+        calificacionCopy = Math.round (calificacion * 10 ) / 10;
+        console.info (calificacionCopy)
+        return calificacionCopy;
+    }
+
+
+
+    /*    
+                BRINDAR FICHA TECNCIA 
+                ---------------------
+    */
+
+
+    fichaTecnica (){
+        console.info (` Ficha tecnica: \n ID de la pelicula: ${this.id} \n Titulo: ${this.titulo} \n Director: ${this.director} \n estreno: ${this.estreno} \n paises: ${this.paises} \n generos: ${this.genero} \n calificacion: ${this.calificacion}`)
     }
 }
 
 
-console.log (Pelicula.generosPermitidos);
-Pelicula.generos();
 
-const peliTest = new Pelicula ({
-    id: 'xx1234567',
-    titulo: "La toalla del mojado",
-    director: "Alex Merito",
-    estreno: '2004', 
-    paises: ["Honduras"],
-    genero: [' action', 'animation', 'comedy'], 
-    calificacionIMBD: 'ni perra idea'
-})
+const peliculas = [
+    {
+        id: 'xx1234567',
+        titulo: "La toalla del mojado",
+        director: "Alex Merito",
+        estreno: 1909,
+        paises: ["Honduras"],
+        genero: [' action', 'animation', 'comedy'], 
+        calificacionIMBD: 8.88
+    }, 
+
+    {
+        id: 'xx1234567',
+        titulo: "La toalla del mojado",
+        director: "Alex Merito",
+        estreno: 1909,
+        paises: ["Honduras"],
+        genero: [' action', 'animation', 'comedy'], 
+        calificacionIMBD: 8.88
+    }, 
+
+    {
+        id: 'xx1234567',
+        titulo: "La toalla del mojado",
+        director: "Alex Merito",
+        estreno: 1909,
+        paises: ["Honduras"],
+        genero: [' action', 'animation', 'comedy'], 
+        calificacionIMBD: 8.88
+    }
+]
 
 
+peliculas.forEach (el => new Pelicula(el).fichaTecnica());
