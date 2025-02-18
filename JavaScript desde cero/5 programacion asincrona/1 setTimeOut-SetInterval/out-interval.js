@@ -43,3 +43,20 @@ setInterval(() => {
 setInterval(() => {
     console.warn (new Date().toLocaleTimeString())
 }, 1000);
+
+
+/*
+Tambien existen funciones que nos serviran para cancelar esos temporizadores.
+pero ojo, anteriormente debe de estar guardado en una variable, ejemplo 
+*/
+
+
+let timer = setInterval (()=> {
+    console.warn('esto se cancelara en 3 segundos')
+},999)
+
+setTimeout (()=>{
+    // para cancelarlo usamos clearInterval o clearTimeout, dependiendo el caso
+    clearInterval(timer);
+    console.log ('cancelado')
+},3000);
