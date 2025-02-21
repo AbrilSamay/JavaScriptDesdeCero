@@ -9,4 +9,12 @@ Si bien los idiomas de un sólo hilo simplifican la escritura de
 código porque no tiene que preocuparse por los problemas de concurrencia,
  esto también significa que no puede realizar operaciones largas como el
   acceso a la red sin bloquear el hilo principal.
+
+
+Imagina que solicitas datos de una API. Dependiendo de la situación,
+ el servidor puede tardar un tiempo en procesar la solicitud mientras 
+ bloquea el hilo principal y hace que la página web no responda.
+
+Ahí es donde entra en juego la asincronía que permite realizar largas 
+solicitudes de red sin bloquear el hilo principal.
 */
