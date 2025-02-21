@@ -17,4 +17,9 @@ Imagina que solicitas datos de una API. Dependiendo de la situación,
 
 Ahí es donde entra en juego la asincronía que permite realizar largas 
 solicitudes de red sin bloquear el hilo principal.
+
+JavaScript fue diseñado para ser ejecutado en navegadores,
+ trabajar con peticiones sobre la red y procesar las interacciones 
+ de usuario, al tiempo que mantiene una interfaz fluida.
+
 */
