@@ -22,4 +22,10 @@ JavaScript fue diseñado para ser ejecutado en navegadores,
  trabajar con peticiones sobre la red y procesar las interacciones 
  de usuario, al tiempo que mantiene una interfaz fluida.
 
+ Javascript usa un modelo asíncrono y no bloqueante, con un loop 
+ de eventos implementado en un sólo hilo, (single thread) para 
+ operaciones de entrada y salida (input/output).
+
+Gracias a esta solución, Javascript es áltamente concurrente 
+a pesar de emplear un sólo hilo.
 */
