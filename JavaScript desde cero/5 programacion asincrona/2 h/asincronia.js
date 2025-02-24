@@ -28,4 +28,6 @@ JavaScript fue diseñado para ser ejecutado en navegadores,
 
 Gracias a esta solución, Javascript es áltamente concurrente 
 a pesar de emplear un sólo hilo.
+
+h
 */
