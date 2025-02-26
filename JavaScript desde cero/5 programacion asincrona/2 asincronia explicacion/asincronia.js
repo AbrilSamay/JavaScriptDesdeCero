@@ -37,4 +37,14 @@ Antes de explicar como funciona el modelo de JavaScript es importante entender a
     Operaciones Bloqueantes y No Bloqueantes.
     Operaciones Síncronas y Asíncronas.
 
+Single thread y Multi thread
+
+Un hilo la unidad básica de ejecución de un proceso, 
+cada que abres un programa como el navegador o tu
+ editor de código, se levanta un proceso en tu 
+ computadora e internamente este puede tener uno o
+  varios hilos (threads) ejecutándose para que el
+ proceso funcione.
+
+
 */
