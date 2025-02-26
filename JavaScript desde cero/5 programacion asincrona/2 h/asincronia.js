@@ -29,5 +29,12 @@ JavaScript fue diseñado para ser ejecutado en navegadores,
 Gracias a esta solución, Javascript es áltamente concurrente 
 a pesar de emplear un sólo hilo.
 
-h
+Antes de explicar como funciona el modelo de JavaScript es importante entender algunos conceptos:
+
+    Procesamiento Single thread (Hilo único) y Multi thread (Hilos múltples).
+    Operaciones de CPU y Operaciones de I/O (Entrada y Salida).
+    Operaciones Concurrentes y Paralelas.
+    Operaciones Bloqueantes y No Bloqueantes.
+    Operaciones Síncronas y Asíncronas.
+
 */
