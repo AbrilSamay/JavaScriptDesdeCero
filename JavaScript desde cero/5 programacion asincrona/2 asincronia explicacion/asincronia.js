@@ -46,5 +46,9 @@ cada que abres un programa como el navegador o tu
   varios hilos (threads) ejecutándose para que el
  proceso funcione.
 
+Operaciones de CPU y de Entrada y Salida
+
+Operaciones CPU: Aquellas que pasan el mayor tiempo consumiendo Procesos del CPU, por ejemplo, la escritura de ficheros.
+Operaciones de Entrada y Salida: Aquellas que pasan la mayor parte del tiempo esperando la respuesta de una petición o recurso, como la solicitud a una API o BD.
 
 */
