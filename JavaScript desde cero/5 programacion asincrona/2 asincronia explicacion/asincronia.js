@@ -51,4 +51,16 @@ Operaciones de CPU y de Entrada y Salida
 Operaciones CPU: Aquellas que pasan el mayor tiempo consumiendo Procesos del CPU, por ejemplo, la escritura de ficheros.
 Operaciones de Entrada y Salida: Aquellas que pasan la mayor parte del tiempo esperando la respuesta de una petición o recurso, como la solicitud a una API o BD.
 
+Concurrencia y Paralelismo
+
+    Concurrencia: cuando dos o más tareas progresan simultáneamente.
+    Paralelismo: cuando dos o más tareas se ejecutan, al mismo tiempo.
+
+Bloqueante y No Bloqueante
+
+Se refiere a como la fase de espera de las operaciones afectan a nuestra aplicación:
+
+    Bloqueante: Son operaciones que no devuelven el control a nuestra aplicación hasta que se ha completado. Por tanto el thread queda bloqueado en estado de espera.
+    No Bloqueante: Son operaciones que devuelven inmediatamente el control a nuestra aplicación, independientemente del resultado de esta. En caso de que se haya completado, devolverá los datos solicitados. En caso contrario (si la operación no ha podido ser satisfecha) podría devolver un código de error.
+
 */
