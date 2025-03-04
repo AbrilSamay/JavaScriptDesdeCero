@@ -63,4 +63,17 @@ Se refiere a como la fase de espera de las operaciones afectan a nuestra aplicac
     Bloqueante: Son operaciones que no devuelven el control a nuestra aplicación hasta que se ha completado. Por tanto el thread queda bloqueado en estado de espera.
     No Bloqueante: Son operaciones que devuelven inmediatamente el control a nuestra aplicación, independientemente del resultado de esta. En caso de que se haya completado, devolverá los datos solicitados. En caso contrario (si la operación no ha podido ser satisfecha) podría devolver un código de error.
 
+
+Síncrono y Asíncrono
+
+Se refiere a ¿cuándo tendrá lugar la respuesta?:
+
+    Síncrono: La respuesta sucede en el presente, una operación síncrona esperará el resultado.
+    Asíncrono: La respuesta sucede a futuro, una operación asíncrona no esperará el resultado.
+
+Con lo anterior en JavaScript podemos tener:
+
+    Código síncrono y bloqueante o
+    Código asíncrono y no bloquenate
+
 */
