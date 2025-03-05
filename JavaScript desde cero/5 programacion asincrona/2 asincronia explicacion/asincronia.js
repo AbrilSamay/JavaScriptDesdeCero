@@ -76,4 +76,13 @@ Con lo anterior en JavaScript podemos tener:
     Código síncrono y bloqueante o
     Código asíncrono y no bloquenate
 
+
+JavaScript Síncrono
+
+Cada operación se hace de una vez, bloqueando el 
+flujo de ejecución, el hilo es bloqueado mientras espera 
+la respuesta, cuando esta se procesa pasa a la siguiente
+ operación y así sucesivamente al terminar todas las operaciones.
+ 
+
 */
