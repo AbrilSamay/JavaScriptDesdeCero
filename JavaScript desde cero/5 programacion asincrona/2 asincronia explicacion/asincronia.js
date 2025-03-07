@@ -86,14 +86,43 @@ la respuesta, cuando esta se procesa pasa a la siguiente
  
 */
 
+// console.log("Inicio");
+
+// function dos() {
+//   console.log("Dos");
+// }
+
+// function uno() {
+//   console.log("Uno");
+//   dos();
+//   console.log("Tres");
+// }
+
+// uno();
+// console.log("Fin");
+
+/*
+JavaScript Asíncrono
+
+Cada operación se ejecuta y devuelve inmediatamente el control al hilo, 
+evitando el bloqueo, cuando cada operación termine se enviará una 
+notificación de que ha terminado, es entonces cuando la respuesta 
+se encolará para ser procesada.
+
+*/
+
 console.log("Inicio");
 
 function dos() {
-  console.log("Dos");
+  setTimeout(function () {
+    console.log("Dos");
+  }, 1000);
 }
 
 function uno() {
-  console.log("Uno");
+  setTimeout(function () {
+    console.log("Uno");
+  }, 0);
   dos();
   console.log("Tres");
 }
